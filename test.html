@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zxcvbn WebAssembly Test</title>
+    <script type="module">
+        import init, { zxcvbn } from './pkg/zxcvbn_rs_wasm.js';
+        window.zxcvbn = zxcvbn;
+
+        async function run() {
+            await init(); // Initialize the wasm module
+            window.zxcvbn = zxcvbn;
+            console.log("zxcvbn loaded");
+        }
+
+        run();
+    </script>
+</head>
+<body>
+    <h1>zxcvbn WebAssembly Test</h1>
+    <p>Open JS console and run <code>zxcvbn("mypassword")</code></p>
+</body>
+</html>
