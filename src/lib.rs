@@ -6,7 +6,7 @@ use serde_wasm_bindgen::to_value;
 
 #[wasm_bindgen(js_name = zxcvbn)]
 pub fn zxcvbn_js(password: &str) -> JsValue {
-    let result = zxcvbn_fn(password, &[]).unwrap();
+    let result = zxcvbn_fn(password, &[]);
     // Directly convert the Rust struct to JsValue, which will be a JavaScript object
     to_value(&result).unwrap()
 }

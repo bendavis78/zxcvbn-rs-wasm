@@ -8,13 +8,12 @@ edition = "2021"
 [dependencies]
 serde = "1.0"
 serde_json = "1.0"
-serde-wasm-bindgen = "0.3"
+serde-wasm-bindgen = "0.6"
 wasm-bindgen = "0.2"
 
 [dependencies.zxcvbn]
-version = "2"
-features = ["ser"]
-path = "/home/ben/Projects/experiments/zxcvbn-rs" 
+version = "3.1"
+features = ["ser"] 
 
 [lib]
 crate-type = ["cdylib"]
